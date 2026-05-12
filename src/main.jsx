@@ -50,7 +50,7 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename="/proyectofront-geowatch">
         <AuthProvider>
           <I18nProvider>
             <App />
