@@ -1,8 +1,8 @@
 import { useState, Suspense, lazy } from 'react'
 import { useTranslation } from '../i18n.jsx'
 import { useEarthquakes } from '../hooks/useEarthquakes.js'
-import EarthquakeList from '../components/EarthquakeList.jsx'
-import MagnitudeChart from '../components/MagnitudeChart.jsx'
+import EarthquakeList from '../components/Earthquakelist.jsx'
+import MagnitudeChart from '../components/Magnitudechart.jsx'
 import { LoadingState, ErrorState } from '../components/LoadingState.jsx'
 import { motion } from 'framer-motion'
 
