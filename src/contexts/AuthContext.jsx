@@ -13,8 +13,7 @@
 //   - Refresh token EN sessionStorage: permite reauth en reload pero no persistencia
 //   - Auto-logout en fallo de refresh: protege contra sesiones expiradas
 // 
-// @ai-assisted Claude proposed the in-memory access token pattern; verified against
-//              OWASP Auth Cheat Sheet at owasp.org/www-community/attacks/xss.
+
 
 import { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react'
 import { login as apiLogin, refreshToken, getMe } from '../services/authApi.js'
