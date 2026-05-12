@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // Replace 'geophysical-aggregator' with your actual GitHub repo name for gh-pages deploy
 export default defineConfig({
-  base: '/proyectofront-geowatch/',
+  base: '/',
   plugins: [
     react(),
     tailwindcss(),
