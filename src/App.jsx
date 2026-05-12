@@ -26,6 +26,8 @@ import NotFound    from './pages/NotFound.jsx'
 // Ej: /es/earthquakes lleva al usuario a la versión en español
 //
 // Validación: Solo permite 'en' y 'es'. Redirecciona a /en si hay URL invalida.
+import { useEffect } from 'react'
+
 function LangWrapper({ children }) {
   const { lang } = useParams()
   const { setLocale } = useI18n()
@@ -33,8 +35,11 @@ function LangWrapper({ children }) {
   const valid = ['en', 'es']
   if (!valid.includes(lang)) return <Navigate to="/en" replace />
 
-  // Sincroniza el contexto i18n con la URL (lightweight - solo setState si cambió)
-  setLocale(lang)
+  // useEffect = fuera del ciclo de render, sin crash
+  useEffect(() => {
+    setLocale(lang)
+  }, [lang])
+
   return children
 }
 
