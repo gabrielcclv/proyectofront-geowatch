@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { useTranslation } from '../i18n.js'
+import { useTranslation } from '../i18n.jsx'
 
 export default function NotFound() {
   const { t }           = useTranslation()
